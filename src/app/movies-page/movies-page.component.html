@@ -1,0 +1,54 @@
+<div class="form-container">
+  <h2>Postează o Recomandare</h2>
+  <form (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group">
+      <label for="poster">Poster:</label>
+      <input type="file" id="poster" (change)="onFileSelected($event)">
+    </div> -->
+    <div class="form-group">
+      <label for="message">Mesaj:</label>
+      <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" [(ngModel)]="rating" name="rating" min="1" max="10" required>
+    </div>
+    <button type="submit">Postează Recomandarea</button>
+  </form>
+  
+  <h2>Creează un Grup de Prieteni</h2>
+  <form (ngSubmit)="onCreateGroup()">
+    <div class="form-group">
+      <label for="group-name">Nume Grup:</label>
+      <input type="text" id="group-name" [(ngModel)]="groupName" name="groupName" required>
+    </div>
+    <button type="submit">Creează Grup</button>
+  </form>
+  
+  <h2>Împărtășește Filme în cadrul Grupului</h2>
+  <form (ngSubmit)="onShareMovie()">
+    <div class="form-group">
+      <label for="group-id">ID Grup:</label>
+      <input type="text" id="group-id" [(ngModel)]="groupId" name="groupId" required>
+    </div>
+    <div class="form-group">
+      <label for="movie-id">ID Film:</label>
+      <input type="text" id="movie-id" [(ngModel)]="movieId" name="movieId" required>
+    </div>
+    <button type="submit">Împărtășește Filmul</button>
+  </form>
+</div>
+
+
+<div>
+  <h2>Movie Recommendations</h2>
+  <div *ngFor="let movie of movies$ | async" class="movie-card">
+    <div>
+      <h3>{{movie.title}}</h3>
+      <p>{{movie.message}}</p>
+      <p>Rating: {{movie.rating}}/5</p>
+      <p>Posted on: {{ movie.createdAt | date }}</p>
+    </div>
+  </div>
+</div>
+

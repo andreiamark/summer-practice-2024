@@ -1,0 +1,13 @@
+
+<div>
+  <h2>Select Users</h2>
+  <div *ngFor="let user of users$ | async" (click)="toggleUserSelection(user)" [class.selected]="isSelected(user)" class="user-card">
+    <p>{{ user.email }}</p>
+  </div>
+  <div>
+ 
+    <ul>
+      <li *ngFor="let user of selectedUsers">{{ user.email }}</li>
+    </ul>
+  </div>
+</div>

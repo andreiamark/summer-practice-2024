@@ -1,0 +1,72 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    .header {
+      background-color: #7a4c4c;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+    }
+
+    .header p {
+      margin: 0;
+      padding: 10px 15px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+
+    }
+
+    .header p:hover {
+      background-color: #555;
+    }
+
+    .header p.active {
+      background-color: #8768a4;
+    }
+
+/* Set the height and overflow properties to make the content scrollable */
+.content {
+    height: 100vh; /* or any specific height you need */
+    overflow-y: auto;
+  }
+  
+  /* Optional: Some basic styles for the content */
+  .content {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Optional: Custom scrollbar styles */
+  .content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .content::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 10px;
+  }
+  
+  .content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  a {
+    color: inherit; /* Inherits color from its parent */
+    text-decoration: none; /* Removes the underline */
+  }
+  
+  a:hover {
+    color: inherit; /* Optional: maintain the same color on hover */
+    text-decoration: none; /* Optional: maintain no underline on hover */
+  }
+  

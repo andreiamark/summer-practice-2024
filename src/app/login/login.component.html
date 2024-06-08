@@ -1,0 +1,19 @@
+
+<div class="popup">
+
+  <div class="popup-content">
+    <h2>Login</h2>
+    <form (ngSubmit)="login(emailLogin.value, passwordLogin.value)">
+      <input type="email" #emailLogin placeholder="Email" required>
+      <input type="password" #passwordLogin placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <h2>Signup</h2>
+    <form (ngSubmit)="signup(emailSignup.value, passwordSignup.value)">
+      <input type="email" #emailSignup placeholder="Email" required>
+      <input type="password" #passwordSignup placeholder="Password" required>
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+</div>
